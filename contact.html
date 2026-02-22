@@ -1,283 +1,437 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Contact Us | All Sides Imports - China Sourcing Support</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | All Sides Imports - China Sourcing Support</title>
 
-<!-- SEO Meta Tags -->
-<meta name="description" content="Contact All Sides Imports for China sourcing inquiries, wholesale pricing, and import logistics support. Reach our team via phone, email, or contact form.">
-<meta name="keywords" content="contact China sourcing, wholesale inquiry, import support, China supplier contact, sourcing agent contact, wholesale distributor, import logistics help, China procurement support">
-<meta name="author" content="All Sides Imports">
-<meta name="robots" content="index, follow">
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Contact All Sides Imports for China sourcing inquiries, wholesale pricing, and import logistics support. Reach our team via phone, email, or contact form.">
+  <meta name="keywords" content="contact China sourcing, wholesale inquiry, import support, China supplier contact, sourcing agent contact, wholesale distributor, import logistics help, China procurement support">
+  <meta name="author" content="All Sides Imports">
+  <meta name="robots" content="index, follow">
 
-<!-- Open Graph Meta Tags -->
-<meta property="og:title" content="Contact All Sides Imports - China Sourcing Experts">
-<meta property="og:description" content="Get in touch with our team for all your China sourcing and wholesale import needs.">
-<meta property="og:type" content="website">
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Contact All Sides Imports - China Sourcing Experts">
+  <meta property="og:description" content="Get in touch with our team for all your China sourcing and wholesale import needs.">
+  <meta property="og:type" content="website">
 
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Sitemap -->
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
 
-<style>
-.contact-container {
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+  .contact-container {
     max-width: 900px;
     margin: 0 auto;
-}
+  }
 
-.contact-info {
+  .contact-info {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
     margin-bottom: 40px;
-}
+  }
 
-.contact-item {
-    padding: 20px;
-    background: #f8f9fa;
-    border-radius: 8px;
+  .contact-item {
+    padding: 25px 20px;
+    background: #f0f4f8;
+    border-radius: 12px;
     text-align: center;
-}
+    border-left: 4px solid #1e5fa3;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
 
-.contact-item i {
+  .contact-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .contact-item i {
     font-size: 32px;
-    color: #007bff;
+    color: #1e5fa3;
     margin-bottom: 15px;
     display: block;
-}
+  }
 
-.contact-item h3 {
+  .contact-item h3 {
     margin: 10px 0;
-    color: #333;
-}
+    color: #0f2a44;
+    font-size: 18px;
+    font-weight: 800;
+  }
 
-.contact-item p {
+  .contact-item p {
     margin: 5px 0;
     color: #666;
-}
+    font-size: 15px;
+  }
 
-.contact-item a {
-    color: #007bff;
+  .contact-item a {
+    color: #1e5fa3;
     text-decoration: none;
     font-weight: 600;
-}
+    transition: color 0.2s ease;
+  }
 
-.contact-item a:hover {
-    text-decoration: underline;
-}
+  .contact-item a:hover {
+    color: #25d366;
+  }
 
-.contact-form {
-    background: #f8f9fa;
-    padding: 30px;
-    border-radius: 8px;
+  .contact-form {
+    background: #f0f4f8;
+    padding: 35px;
+    border-radius: 14px;
     margin-bottom: 30px;
-}
+    border-left: 4px solid #1e5fa3;
+  }
 
-.form-group {
+  .contact-form h2 {
+    font-size: 24px;
+    font-weight: 900;
+    color: #0f2a44;
+    margin-bottom: 10px;
+  }
+
+  .contact-form p {
+    color: #555;
     margin-bottom: 20px;
-}
+    font-size: 15px;
+  }
 
-.form-group label {
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .form-group label {
     display: block;
     margin-bottom: 8px;
     font-weight: 600;
     color: #333;
-}
+  }
 
-.form-group input,
-.form-group textarea {
+  .form-group input,
+  .form-group textarea {
     width: 100%;
     padding: 12px;
     border: 1px solid #ddd;
-    border-radius: 5px;
+    border-radius: 8px;
     font-size: 14px;
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', sans-serif;
     box-sizing: border-box;
-}
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
 
-.form-group textarea {
+  .form-group textarea {
     resize: vertical;
-    min-height: 120px;
-}
+    min-height: 130px;
+  }
 
-.form-group input:focus,
-.form-group textarea:focus {
+  .form-group input:focus,
+  .form-group textarea:focus {
     outline: none;
-    border-color: #007bff;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
-}
+    border-color: #1e5fa3;
+    box-shadow: 0 0 5px rgba(30, 95, 163, 0.3);
+  }
 
-button[type="submit"] {
-    background-color: #007bff;
+  button[type="submit"] {
+    background: #1e5fa3;
     color: white;
     padding: 14px 30px;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
     width: 100%;
-    transition: background-color 0.3s;
-}
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
 
-button[type="submit"]:hover {
-    background-color: #0056b3;
-}
+  button[type="submit"]:hover {
+    background: #0f2a44;
+    transform: translateY(-2px);
+  }
 
-.socials {
-    text-align: center;
-    margin-top: 30px;
-}
+  .success-message {
+    background: #d4edda;
+    color: #155724;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #c3e6cb;
+    display: none;
+    font-weight: 600;
+  }
 
-.socials a {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    background-color: #007bff;
-    color: white;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 50px;
-    margin: 0 10px;
-    transition: background-color 0.3s;
-    text-decoration: none;
-}
-
-.socials a:hover {
-    background-color: #0056b3;
-}
-
-.socials i {
-    font-size: 24px;
-}
-@media (max-width: 768px) {
-    .contact-container {
-        padding: 0 15px;
-    }
-    
+  @media (max-width: 768px) {
     .contact-info {
-        grid-template-columns: 1fr;
-        gap: 20px;
+      grid-template-columns: 1fr;
+      gap: 20px;
     }
-    
-    .contact-item {
-        padding: 15px;
-    }
-    
-    .contact-item i {
-        font-size: 28px;
-    }
-    
-    .contact-item h3 {
-        font-size: 1.2em;
-    }
-    
-    .contact-item p {
-        font-size: 0.9em;
-    }
-    
+
     .contact-form {
-        padding: 20px;
+      padding: 20px;
     }
-    
-    button[type="submit"] {
-        padding: 12px 20px;
-        font-size: 15px;
-    }
-}
-</style>
+  }
+  </style>
 </head>
 
 <body>
 
-<header>
-    <div class="logo">All Sides Imports</div>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="services.html">Services</a>
-        <a href="contact.html" class="active">Contact</a>
+<!-- ================================
+     HEADER
+================================= -->
+<header class="header">
+  <div class="nav-container">
+
+    <!-- LOGO -->
+    <div class="logo-container">
+      <img src="image/logo.png" alt="All Sides Imports Logo">
+      <span>All Sides Imports<br>
+        <small>China Sourcing • Shipping • Worldwide Delivery</small>
+      </span>
+    </div>
+
+    <!-- NAVIGATION -->
+    <nav id="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html" class="active">Contact</a>
     </nav>
+
+    <!-- GET A QUOTE BUTTON -->
+    <a href="quote.html" class="btn-primary">Send Us Inquiry</a>
+
+    <!-- MOBILE MENU TOGGLE -->
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <i class="fa-solid fa-bars menu-icon open"></i>
+      <i class="fa-solid fa-times menu-icon close"></i>
+    </div>
+
+  </div>
 </header>
 
-<section class="page active">
-    <section class="inner-page">
-        <h1>Contact All Sides Imports</h1>
-        <p>
-            Reach out to our team for all your China sourcing needs. We're here to help with product sourcing, 
-            supplier verification, quality control, and international shipping logistics.
-        </p>
+<!-- ================================
+     PAGE BANNER
+================================= -->
+<div class="page-banner">
+  <h1>Contact Us</h1>
+  <p>Home / Contact Us</p>
+</div>
 
-        <div class="contact-container">
-            <div class="contact-info">
-                <div class="contact-item">
-                    <i class="fas fa-phone"></i>
-                    <h3>Phone</h3>
-                    <p><a href="tel:+8615258897944">+86(152) 5889 7944</a></p>
-                </div>
-                
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <h3>Email</h3>
-                    <p><a href="mailto:allsidesrhoda@gmail.com">allsidesrhoda@gmail.com</a></p>
-                </div>
-            </div>
+<!-- ================================
+     CONTACT CONTENT
+================================= -->
+<section class="inner-page">
+  <h2><i class="fa-solid fa-envelope"></i> Get In Touch</h2>
+  <p>
+    Reach out to our team for all your China sourcing needs. We're here to
+    help with product sourcing, supplier verification, quality control,
+    and international shipping logistics.
+  </p>
 
-            <div class="contact-form">
-                <h2>Send Us a Message</h2>
-                <p>
-                    Fill out the form below and our team will respond within 24 hours with a 
-                    customized China sourcing solution for your business.
-                </p>
-                
-                <form action="send-contact.php" method="POST">
-                    <div class="form-group">
-                        <label for="name">Full Name</label>
-                        <input type="text" name="name" id="name" placeholder="Your Full Name" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" name="email" id="email" placeholder="Your Email Address" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" name="phone" id="phone" placeholder="Your Phone Number" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="subject">Subject</label>
-                        <input type="text" name="subject" id="subject" placeholder="Subject of your inquiry" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea name="message" id="message" placeholder="Please describe your China sourcing needs, product categories, and any other requirements" required></textarea>
-                    </div>
-                    
-                    <button type="submit">
-                        <i class="fa-solid fa-paper-plane"></i> Send Message
-                    </button>
-                </form>
-            </div>
+  <!-- Success Message -->
+  <div class="success-message" id="successMessage">
+    <i class="fa-solid fa-circle-check"></i>
+    <strong> Message Sent!</strong> Our team will respond within 24 hours.
+  </div>
+
+  <div class="contact-container">
+
+    <!-- Contact Info Cards -->
+    <div class="contact-info">
+
+      <div class="contact-item">
+        <i class="fa-solid fa-phone"></i>
+        <h3>Kenya Office</h3>
+        <p><a href="tel:0714639777">0714 639 777</a></p>
+        <p><small>Available 24/7</small></p>
+      </div>
+
+      <div class="contact-item">
+        <i class="fa-brands fa-whatsapp"></i>
+        <h3>WhatsApp</h3>
+        <p><a href="https://wa.me/254714639777" target="_blank">
+          +254 714 639 777
+        </a></p>
+        <p><small>Available 24/7</small></p>
+      </div>
+
+      <div class="contact-item">
+        <i class="fa-solid fa-phone"></i>
+        <h3>China Office</h3>
+        <p><a href="tel:+8615258897944">+86 152 5889 7944</a></p>
+        <p><small>Available 24/7</small></p>
+      </div>
+
+      <div class="contact-item">
+        <i class="fa-solid fa-envelope"></i>
+        <h3>Email Us</h3>
+        <p><a href="mailto:allsidesrhoda@gmail.com">
+          allsidesrhoda@gmail.com
+        </a></p>
+        <p><small>Reply within 24 hours</small></p>
+      </div>
+
+      <div class="contact-item">
+        <i class="fa-solid fa-location-dot"></i>
+        <h3>Location</h3>
+        <p>China</p>
+        <p><small>Worldwide Delivery</small></p>
+      </div>
+
+      <div class="contact-item">
+        <i class="fa-solid fa-clock"></i>
+        <h3>Working Hours</h3>
+        <p></p>
+        <p><small>Available 24/7</small></p>
+      </div>
+
+    </div>
+
+    <!-- Contact Form -->
+    <div class="contact-form">
+      <h2><i class="fa-solid fa-paper-plane"></i> Send Us a Message</h2>
+      <p>
+        Fill out the form below and our team will respond within 24 hours
+        with a customized China sourcing solution for your business.
+      </p>
+
+      <form action="send-contact.php" method="POST">
+
+        <div class="form-group">
+          <label for="name">
+            <i class="fa-solid fa-user"></i> Full Name *
+          </label>
+          <input type="text" name="name" id="name"
+          placeholder="Your Full Name" required>
         </div>
 
-        <div class="socials">
-            <a href="https://facebook.com/allsidesimports" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="https://instagram.com/allsidesimports" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://twitter.com/allsidesimports" target="_blank"><i class="fab fa-x-twitter"></i></a>
+        <div class="form-group">
+          <label for="email">
+            <i class="fa-solid fa-envelope"></i> Email Address *
+          </label>
+          <input type="email" name="email" id="email"
+          placeholder="Your Email Address" required>
         </div>
-    </section>
+
+        <div class="form-group">
+          <label for="phone">
+            <i class="fa-solid fa-phone"></i> Phone Number *
+          </label>
+          <input type="tel" name="phone" id="phone"
+          placeholder="Your Phone Number" required>
+        </div>
+
+        <div class="form-group">
+          <label for="subject">
+            <i class="fa-solid fa-tag"></i> Subject *
+          </label>
+          <input type="text" name="subject" id="subject"
+          placeholder="Subject of your inquiry" required>
+        </div>
+
+        <div class="form-group">
+          <label for="message">
+            <i class="fa-solid fa-message"></i> Message *
+          </label>
+          <textarea name="message" id="message"
+          placeholder="Please describe your China sourcing needs,
+          product categories, and any other requirements"
+          required></textarea>
+        </div>
+
+        <button type="submit">
+          <i class="fa-solid fa-paper-plane"></i> Send Message
+        </button>
+
+      </form>
+    </div>
+
+  </div>
 </section>
 
-<footer>
-    <p>&copy; <span id="year"></span> All Sides Imports | Your Trusted China Sourcing Partner | Developed by You</p>
-</footer>
+<!-- ================================
+     WHATSAPP FLOATING BUTTON
+================================= -->
+<a href="#" class="whatsapp-float" onclick="showWhatsAppPopup(event)"
+aria-label="Chat on WhatsApp">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
 
-<script>
-document.getElementById("year").textContent = new Date().getFullYear();
-</script>
+<!-- WHATSAPP POPUP -->
+<div class="whatsapp-popup" id="whatsappPopup">
+  <div class="whatsapp-popup-header">
+    <div class="whatsapp-popup-avatar">
+      <i class="fa-brands fa-whatsapp"></i>
+    </div>
+    <div class="whatsapp-popup-info">
+      <strong>All Sides Imports</strong>
+      <small>Typically replies within minutes</small>
+    </div>
+    <span class="whatsapp-popup-close" onclick="closeWhatsAppPopup()">✕</span>
+  </div>
 
-</body>
-</html>
+  <div class="whatsapp-popup-body">
+    <div class="whatsapp-bubble">
+      <div class="typing-indicator" id="typingIndicator">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="whatsapp-message-text" id="whatsappMessageText"
+      style="display:none;">
+        👋 Hello! Welcome to <strong>All Sides Imports</strong>.
+        Are you looking to import products from China?
+        We offer the best sourcing, supplier verification,
+        and worldwide shipping services at affordable prices.
+        How can we help you today? 🚢📦
+      </div>
+    </div>
+  </div>
+
+  <div class="whatsapp-popup-footer">
+    <a href="https://wa.me/254714639777" target="_blank"
+    class="whatsapp-chat-btn">
+      <i class="fa-brands fa-whatsapp"></i> Start Chat
+    </a>
+  </div>
+</div>
+
+<!-- ================================
+     FOOTER NAVIGATION
+================================= -->
+<div class="footer-nav">
+  <div class="footer-nav-container">
+
+    <!-- Column 1: Quick Links -->
+    <div class="footer-nav-column">
+      <h4>Quick Links</h4>
+      <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+      <a href="about.html"><i class="fa-solid fa-circle-info"></i> About Us</a>
+      <a href="services.html"><i class="fa-solid fa-briefcase"></i> Services</a>
+      <a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a>
+      <a href="quote.html"><i class="fa-solid fa-file-invoice"></i> Send Us Inquiry</a>
+    </div>
+
+    <!-- Column 2: Our Services -->
+    <div class="footer-nav-column">
+      <h4>Our Services</h4>
+      <a href="services.html">
+        <i class="fa-solid fa-magnifying-glass"></i> Product Sourcing
+      </a>
+      <a href="services.html">
+        <i class="fa-solid fa-shield-halved"></i> Supplier Verification
+      </a>
+      <a href="services.html">
+        <i class="fa-solid fa-truck-fast"></i> Worldwide Shipping
+      </a>
+      <a href="services.html">
+        <i class="fa-solid fa-box"></i> Customs Clearance
+      </a>
+      <a href="services.html">
+        <i class="fa-solid fa-warehouse"></i> Warehousing
+      

@@ -90,6 +90,16 @@ button[type="submit"]:hover {
     background-color: #0056b3;
 }
 
+.success-message {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #c3e6cb;
+    display: none;
+}
+
 @media (max-width: 768px) {
     .checkbox-group {
         grid-template-columns: 1fr;
@@ -102,9 +112,8 @@ button[type="submit"]:hover {
 
 <header class="header">
   <div class="nav-container">
-    <div class="logo">
-      <img src="image/logo.png" alt="All Sides Imports Logo">
-      <span>All Sides Imports<br><small>China Sourcing & Wholesale Solutions</small></span>
+    <div class="logo-container">
+      <img src="image/logo.png" alt="All Sides Imports Logo" class="logo">
     </div>
 
     <nav id="nav">
@@ -114,8 +123,11 @@ button[type="submit"]:hover {
       <a href="contact.html">Contact</a>
     </nav>
 
-    <a href="quote.html" class="btn-primary active">Get a Quote</a>
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <a href="quote.html" class="btn-primary active">Send Us Inquiry</a>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <i class="fa-solid fa-bars menu-icon open"></i>
+      <i class="fa-solid fa-times menu-icon close"></i>
+    </div>
   </div>
 </header>
 
@@ -127,9 +139,149 @@ button[type="submit"]:hover {
     will contact you within 24 hours.
   </p>
 
+  <div class="success-message" id="successMessage">
+    <strong>Success!</strong> Your quote request has been submitted. We'll contact you within 24 hours.
+  </div>
+
   <div class="quote-form-container">
     <form action="send-quote.php" method="POST">
 
       <!-- Contact Information -->
       <div class="form-group">
-        <label for="name
+        <label for="name">Full Name *</label>
+        <input type="text" id="name" name="name" required placeholder="Enter your full name">
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address *</label>
+        <input type="email" id="email" name="email" required placeholder="your@email.com">
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone Number *</label>
+        <input type="tel" id="phone" name="phone" required placeholder="+254 700 000 000">
+      </div>
+
+      <div class="form-group">
+        <label for="company">Company Name (Optional)</label>
+        <input type="text" id="company" name="company" placeholder="Your company name">
+      </div>
+
+      <div class="form-group">
+  <label for="country">Country *</label>
+  <div class="autocomplete">
+    <input type="text" id="countryInput" placeholder="Start typing your country..." autocomplete="off">
+    <input type="hidden" id="countryValue" name="country" required>
+    <div id="countryDropdown" class="autocomplete-items"></div>
+  </div>
+</div>
+
+      <!-- Services Needed -->
+      <div class="form-group">
+        <label>Services Needed *</label>
+        <div class="checkbox-group">
+          <label>
+            <input type="checkbox" name="services[]" value="Product Sourcing">
+            Product Sourcing
+          </label>
+          <label>
+            <input type="checkbox" name="services[]" value="Supplier Verification">
+            Supplier Verification
+          </label>
+          <label>
+            <input type="checkbox" name="services[]" value="Quality Inspection">
+            Quality Inspection
+          </label>
+          <label>
+            <input type="checkbox" name="services[]" value="Shipping & Logistics">
+            Shipping & Logistics
+          </label>
+          <label>
+            <input type="checkbox" name="services[]" value="Customs Clearance">
+            Customs Clearance
+          </label>
+          <label>
+            <input type="checkbox" name="services[]" value="Warehousing">
+            Warehousing
+          </label>
+        </div>
+      </div>
+
+      <!-- Product Details -->
+      <div class="form-group">
+        <label for="product">Product Description *</label>
+        <textarea id="product" name="product" required placeholder="Describe the products you want to import (e.g., electronics, clothing, furniture, etc.)"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="quantity">Estimated Quantity *</label>
+        <input type="text" id="quantity" name="quantity" required placeholder="e.g., 100 units, 1 container, 500 pieces">
+      </div>
+
+      <div class="form-group">
+        <label for="budget">Budget Range (Optional)</label>
+        <select id="budget" name="budget">
+          <option value="">Select budget range</option>
+          <option value="Under $1,000">Under $1,000</option>
+          <option value="$1,000 - $5,000">$1,000 - $5,000</option>
+          <option value="$5,000 - $10,000">$5,000 - $10,000</option>
+          <option value="$10,000 - $50,000">$10,000 - $50,000</option>
+          <option value="Over $50,000">Over $50,000</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="timeline">When do you need the products? *</label>
+        <select id="timeline" name="timeline" required>
+          <option value="">Select timeline</option>
+          <option value="Urgent (1-2 weeks)">Urgent (1-2 weeks)</option>
+          <option value="1 Month">1 Month</option>
+          <option value="2-3 Months">2-3 Months</option>
+          <option value="Flexible">Flexible</option>
+        </select>
+      </div>
+
+      <!-- Additional Information -->
+      <div class="form-group">
+        <label for="details">Additional Details (Optional)</label>
+        <textarea id="details" name="details" placeholder="Any specific requirements, preferences, or questions you have about the sourcing process"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="source">How did you hear about us? (Optional)</label>
+        <select id="source" name="source">
+          <option value="">Select an option</option>
+          <option value="Google Search">Google Search</option>
+          <option value="Social Media">Social Media</option>
+          <option value="Friend/Referral">Friend/Referral</option>
+          <option value="Advertisement">Advertisement</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+
+      <button type="submit">Submit Quote Request</button>
+    </form>
+  </div>
+</section>
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/254714639777" class="whatsapp-float" aria-label="Chat on WhatsApp">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<div class="footer-social">
+  <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+  <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+  <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+</div>
+<script src="js/script.js"></script>
+<script>
+// Show success message if redirected with success parameter
+if (window.location.search.includes('success=1')) {
+    document.getElementById('successMessage').style.display = 'block';
+    // Scroll to top to see the message
+    window.scrollTo(0, 0);
+}
+</script>
+</body>
+</html>
